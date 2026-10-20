@@ -1,0 +1,23 @@
+# Core dependencies with pinned versions for CS203 Assignment 1
+pandas==3.0.6
+numpy==2.5.4
+scipy==1.18.1
+soundfile==0.14.0
+miniaudio==1.71
+gTTS==2.5.4
+faster-whisper==1.2.1
+jiwer==4.0.0
+scikit-learn==1.9.1
+matplotlib==3.11.2
+pytest==9.1.1
+dvc==3.67.1
+reportlab==5.0.1
+ctranslate2==4.8.3
+av==19.0.1
+joblib==1.6.0
+packaging==26.3
+click==8.5.0
+pydantic==2.14.1
+PyYAML==6.0.3
+requests==2.34.2
+tqdm==4.70.1

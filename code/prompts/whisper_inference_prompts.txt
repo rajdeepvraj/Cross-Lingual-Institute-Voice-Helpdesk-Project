@@ -1,0 +1,18 @@
+================================================================================
+WHISPER INFERENCE & DECODING CONFIGURATION (Part D)
+Model: faster-whisper-tiny (CTranslate2 int8 CPU quantization)
+Target File: code/src/augmentation/run_augmentations_and_whisper.py
+================================================================================
+
+Inference Configuration:
+- Model Name: `Systran/faster-whisper-tiny`
+- Architecture: 39M parameter encoder-decoder transformer
+- Quantization: `int8` CPU quantization
+- Decoding Beam Size: `5`
+- Language Prompt / Setting: `language="en"` (zero-shot Indian English / multilingual code-mixed transcription)
+- Temperature: `0.0` (greedy deterministic decoding)
+- Audio Input: 16,000 Hz float32 array normalized to [-1.0, 1.0]
+
+Purpose:
+Evaluate baseline off-the-shelf zero-shot performance across clean and augmented speech to establish the empirical degradation benchmark for Assignment 2 fine-tuning.
+================================================================================

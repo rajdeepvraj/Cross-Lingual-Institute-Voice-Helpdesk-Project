@@ -1,0 +1,21 @@
+<View>
+  <!-- Audio Player Interface -->
+  <Header value="IITGN Voice Helpdesk Audio Audition"/>
+  <AudioPlus name="audio" value="$audio_url" sync="audio_sync" zoom="true"/>
+
+  <!-- Level 1 Annotation: Verbatim Speech Transcription -->
+  <Header value="Level 1: Verbatim Multilingual Transcript (English / Hindi / Gujarati)"/>
+  <Text name="guideline_tip" value="Follow Guidelines v2.0 for standardized transliteration (e.g., chhe, nathi, karva)."/>
+  <TextArea name="transcript" toName="audio"
+            placeholder="Type verbatim spoken words here..."
+            rows="3" maxSubmissions="1" editable="true" required="true"/>
+
+  <!-- Level 2 Annotation: Administrative Intent Classification -->
+  <Header value="Level 2: Institute Helpdesk Intent Routing"/>
+  <Choices name="intent" toName="audio" choice="single" showInline="true" required="true">
+    <Choice value="admissions" hint="Inquiries regarding entrance tests, cutoff ranks, eligibility, and fresh batch onboarding"/>
+    <Choice value="hostel_mess" hint="Residential room maintenance, AC/geyser repairs, mess rebate, dining hall"/>
+    <Choice value="it_support" hint="Campus Wi-Fi, email password reset, Moodle, VPN, HPC cluster, computing lab"/>
+    <Choice value="student_services" hint="Official transcripts, bonafide certificates, fee receipts, student bus, ID cards"/>
+  </Choices>
+</View>

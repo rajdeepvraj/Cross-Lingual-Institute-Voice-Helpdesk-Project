@@ -1,0 +1,26 @@
+================================================================================
+CORPUS GENERATION PROMPTS (Used for Helpdesk Dialogue & Query Seeding)
+Model: Anthropic Claude 3.5 Sonnet (2024-10-22) / OpenAI GPT-4o
+Target File: code/src/collection/helpdesk_corpus.py & data/raw/
+================================================================================
+
+Prompt 1: Multilingual Code-Mixed Helpdesk Queries Generation
+--------------------------------------------------------------------------------
+You are an expert conversational linguist specializing in Indian campus speech patterns.
+Generate 120 authentic voice helpdesk queries commonly asked by students and visitors at IIT Gandhinagar (IITGN).
+
+The queries must be evenly distributed across 4 administrative domains:
+1. Admissions (eligibility, GATE/JEE cutoffs, offer letters, reporting, OBC certificates)
+2. Hostel & Mess (room AC/geyser repair, mess rebate, dining hall timings, laundry)
+3. IT Support (Eduroam Wi-Fi, email password reset, Moodle portal, VPN, HPC cluster, lab printers)
+4. Student Services (transcripts, bonafide certificates, fee receipts, bus schedules, health insurance)
+
+Linguistic requirements:
+- Use realistic, natural code-mixing between Indian English, Hindi, and Gujarati typical of undergraduate and postgraduate students in Gujarat.
+- Include natural conversational speech markers, authentic institute jargon (Palaj campus, Academic Block 1, Eduroam, Moodle).
+- Provide the text in standardized Latin transliteration.
+- Ensure sentence lengths are suitable for speech recordings of 8 to 15 seconds.
+
+Output format:
+Provide a Python list of tuples: (query_text, primary_language_code, language_mix_tag).
+================================================================================

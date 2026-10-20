@@ -1,0 +1,48 @@
+stages:
+  clean_data:
+    cmd: python3 src/validation/clean_audio_pipeline.py
+    deps:
+      - src/validation/clean_audio_pipeline.py
+    outs:
+      - ../data/processed:
+          cache: false
+
+  split_dataset:
+    cmd: python3 src/collection/create_splits.py
+    deps:
+      - src/collection/create_splits.py
+      - ../data/metadata.csv
+    outs:
+      - ../data/splits:
+          cache: false
+
+  validate_dataset:
+    cmd: python3 src/validation/validate_dataset.py ../data/processed ../data/metadata.csv ../data/splits
+    deps:
+      - src/validation/validate_dataset.py
+      - ../data/processed
+      - ../data/metadata.csv
+      - ../data/splits
+
+  agreement_analysis:
+    cmd: python3 src/labelling/run_agreement_analysis.py
+    deps:
+      - src/labelling/run_agreement_analysis.py
+      - guidelines/guidelines_v1.md
+      - guidelines/guidelines_v2.md
+    outs:
+      - ../data/gold_test_set.csv:
+          cache: false
+      - ../supporting_files/agreement_analysis/agreement_metrics.json:
+          cache: false
+
+  active_learning:
+    cmd: python3 src/active_learning/run_active_learning.py
+    deps:
+      - src/active_learning/run_active_learning.py
+      - ../data/metadata.csv
+    outs:
+      - ../supporting_files/active_learning/al_vs_random_metrics.csv:
+          cache: false
+      - ../supporting_files/active_learning/learning_curve.png:
+          cache: false
