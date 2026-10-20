@@ -1,0 +1,51 @@
+{
+  "generated": "2026-10-19T16:36:08.788301",
+  "total_clips": 284,
+  "total_duration_sec": 4486.0,
+  "total_duration_hours": 1.246,
+  "speakers": 16,
+  "domain_distribution": {
+    "admissions": 97,
+    "it_support": 35,
+    "hostel_mess": 121,
+    "student_services": 31
+  },
+  "validation": {
+    "passed": 282,
+    "failed": 2
+  },
+  "splits": {
+    "train": 136,
+    "val": 48,
+    "test_id": 14,
+    "test_shifted_cohort_b": 86
+  },
+  "gold_test_sha256": "8602554090ddbf8ed2701108e94cab000b95df585ddbd3a5a570cd7fd1fce022",
+  "augmentation_wer": {
+    "clean": 0.4733,
+    "noise_12db": 1.1005,
+    "reverb": 0.9754,
+    "speed_1.1x": 0.896,
+    "codec_telephony": 0.7978
+  },
+  "active_learning": [
+    {
+      "budget": 20,
+      "al_f1": 0.246,
+      "rand_f1": 0.176,
+      "delta": 0.071
+    },
+    {
+      "budget": 40,
+      "al_f1": 0.296,
+      "rand_f1": 0.189,
+      "delta": 0.107
+    },
+    {
+      "budget": 80,
+      "al_f1": 0.273,
+      "rand_f1": 0.215,
+      "delta": 0.058
+    }
+  ]
+}

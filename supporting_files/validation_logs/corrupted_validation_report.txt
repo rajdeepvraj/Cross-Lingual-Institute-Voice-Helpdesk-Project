@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.4, pytest-9.1.1, pluggy-1.7.0 -- /home/rajdeepvraj/Documents/STT AI/Project/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/rajdeepvraj/Documents/STT AI/Project
+plugins: hydra-core-1.3.7, anyio-4.15.1, platformdirs-4.13.3
+collecting ... collected 8 items
+
+code/tests/test_validation_corrupted.py::test_corrupted_sample_rate PASSED [ 12%]
+code/tests/test_validation_corrupted.py::test_corrupted_stereo_channels PASSED [ 25%]
+code/tests/test_validation_corrupted.py::test_corrupted_duration_bounds PASSED [ 37%]
+code/tests/test_validation_corrupted.py::test_corrupted_clipping PASSED  [ 50%]
+code/tests/test_validation_corrupted.py::test_corrupted_excessive_silence PASSED [ 62%]
+code/tests/test_validation_corrupted.py::test_corrupted_severe_noise PASSED [ 75%]
+code/tests/test_validation_corrupted.py::test_corrupted_script_characters PASSED [ 87%]
+code/tests/test_validation_corrupted.py::test_corrupted_split_leakage PASSED [100%]
+
+============================== 8 passed in 0.29s ===============================

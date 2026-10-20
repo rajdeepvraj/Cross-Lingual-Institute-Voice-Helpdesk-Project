@@ -1,0 +1,39 @@
+======================================================================
+VALIDATION REPORT: RAW
+======================================================================
+Total Files Checked: 721
+Passed: 674 | Failed: 47
+----------------------------------------------------------------------
+FAILURE BREAKDOWN BY CHECK:
+  [FAIL] sample_rate             : 24 failures
+  [FAIL] channels                : 24 failures
+  [PASS] duration_bounds         : 0 failures
+  [PASS] clipping                : 0 failures
+  [FAIL] silence_ratio           : 22 failures
+  [PASS] estimated_snr           : 0 failures
+  [FAIL] duplicate_hash          : 1 failures
+  [PASS] script_characters       : 0 failures
+  [PASS] plausible_cps           : 0 failures
+  [PASS] language_id             : 0 failures
+  [PASS] metadata_schema         : 0 failures
+  [PASS] split_leakage           : 0 failures
+----------------------------------------------------------------------
+DETAILED FINDINGS (First 15 items):
+  * AUD_SPK01_0029.wav: Invalid sample rate 44100 Hz (expected 16000 Hz); Invalid channel count 2 (expected 1 mono)
+  * AUD_SPK01_0043.wav: Excessive silence ratio 38.88% (limit 35%)
+  * AUD_SPK01_9999_DUP.wav: Duplicate audio content hash matching AUD_SPK01_0001.wav
+  * AUD_SPK02_0058.wav: Invalid sample rate 44100 Hz (expected 16000 Hz); Invalid channel count 2 (expected 1 mono)
+  * AUD_SPK02_0067.wav: Excessive silence ratio 54.23% (limit 35%)
+  * AUD_SPK02_0086.wav: Excessive silence ratio 35.67% (limit 35%)
+  * AUD_SPK02_0087.wav: Invalid sample rate 44100 Hz (expected 16000 Hz); Invalid channel count 2 (expected 1 mono)
+  * AUD_SPK03_0116.wav: Invalid sample rate 44100 Hz (expected 16000 Hz); Invalid channel count 2 (expected 1 mono)
+  * AUD_SPK03_0129.wav: Excessive silence ratio 37.31% (limit 35%)
+  * AUD_SPK03_0134.wav: Excessive silence ratio 51.78% (limit 35%)
+  * AUD_SPK04_0145.wav: Invalid sample rate 44100 Hz (expected 16000 Hz); Invalid channel count 2 (expected 1 mono)
+  * AUD_SPK04_0174.wav: Invalid sample rate 44100 Hz (expected 16000 Hz); Invalid channel count 2 (expected 1 mono)
+  * AUD_SPK05_0201.wav: Excessive silence ratio 56.86% (limit 35%)
+  * AUD_SPK05_0203.wav: Invalid sample rate 44100 Hz (expected 16000 Hz); Invalid channel count 2 (expected 1 mono)
+  * AUD_SPK05_0215.wav: Excessive silence ratio 38.36% (limit 35%)
+  ... and 32 more issues.
+======================================================================
+

@@ -1,0 +1,6 @@
+augmentation,mean_wer,std_wer,n_clips,delta_vs_clean
+clean,0.4733,1.0015,10,0.0
+noise_12db,1.1005,0.3321,10,0.6271
+reverb,0.9754,0.247,10,0.502
+speed_1.1x,0.896,0.2285,10,0.4227
+codec_telephony,0.7978,0.4113,10,0.3245

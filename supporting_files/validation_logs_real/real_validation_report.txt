@@ -1,0 +1,17 @@
+CS203 A1 — Real Data Validation Report
+Generated: 2026-10-19T16:34:06.441072
+Total clips: 284, Passed: 282, Failed: 2
+
+Check-level summary:
+  [PASS] sample_rate: 0 failures
+  [PASS] channels: 0 failures
+  [PASS] duration_bounds: 0 failures
+  [PASS] clipping: 0 failures
+  [PASS] silence_ratio: 0 failures
+  [PASS] snr_floor: 0 failures
+  [PASS] duplicate_hash: 0 failures
+  [PASS] plausible_duration: 0 failures
+  [PASS] metadata_schema: 0 failures
+  [PASS] file_exists: 0 failures
+  [FAIL] transcript_nonempty: 2 failures
+  [PASS] domain_valid: 0 failures

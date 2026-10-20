@@ -1,0 +1,4 @@
+budget,al_macro_f1,al_accuracy,random_macro_f1_mean,random_macro_f1_std,random_accuracy_mean,f1_advantage
+30,0.6139,0.6111,0.4123,0.0943,0.46,0.2017
+60,0.891,0.8889,0.6538,0.0808,0.6544,0.2372
+120,1.0,1.0,0.8608,0.0575,0.8611,0.1392

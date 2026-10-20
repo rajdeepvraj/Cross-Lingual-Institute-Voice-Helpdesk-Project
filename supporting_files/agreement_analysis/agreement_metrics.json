@@ -1,0 +1,80 @@
+{
+  "round_1": {
+    "num_clips": 60,
+    "guidelines_version": "v1.0",
+    "transcript_inter_annotator_wer": 0.0877,
+    "intent_cohens_kappa": 0.6859,
+    "intent_raw_agreement": 0.7667,
+    "confusion_matrix": [
+      [
+        17,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        11,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        9,
+        3
+      ],
+      [
+        0,
+        4,
+        2,
+        9
+      ]
+    ],
+    "domains": [
+      "admissions",
+      "hostel_mess",
+      "it_support",
+      "student_services"
+    ]
+  },
+  "round_2": {
+    "num_clips": 60,
+    "guidelines_version": "v2.0",
+    "transcript_inter_annotator_wer": 0.0053,
+    "intent_cohens_kappa": 0.955,
+    "intent_raw_agreement": 0.9667,
+    "confusion_matrix": [
+      [
+        11,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        17,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        18,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        12
+      ]
+    ],
+    "domains": [
+      "admissions",
+      "hostel_mess",
+      "it_support",
+      "student_services"
+    ]
+  }
+}

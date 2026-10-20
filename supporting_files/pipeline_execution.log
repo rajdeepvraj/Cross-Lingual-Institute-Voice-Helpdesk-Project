@@ -1,0 +1,115 @@
+Processing 721 raw audio files...
+Skipping duplicate file: AUD_SPK01_9999_DUP.wav
+
+Cleaning Pipeline Complete:
+  - Successfully processed & saved: 720 files
+  - Resampled & mono-converted: 24 files
+  - Silence trimmed: 26 files
+  - Duplicates excluded: 1 files
+============================================================
+DATASET SPLITS SUMMARY:
+============================================================
+Train Set:               360 clips | Speakers: ['SPK01', 'SPK02', 'SPK03', 'SPK04', 'SPK05', 'SPK06', 'SPK07', 'SPK08']
+Validation Set:           90 clips | Speakers: ['SPK09', 'SPK10']
+Test Set (In-Dist):       90 clips | Speakers: ['SPK11', 'SPK12']
+Test Set (Shifted B):    180 clips | Speakers: ['SPK13', 'SPK14', 'SPK15', 'SPK16']
+Total Clips in Splits:   720 / 720
+------------------------------------------------------------
+VERIFICATION SUCCESSFUL: 0% speaker leakage across all splits!
+============================================================
+======================================================================
+VALIDATION REPORT: PROCESSED
+======================================================================
+Total Files Checked: 720
+Passed: 720 | Failed: 0
+----------------------------------------------------------------------
+FAILURE BREAKDOWN BY CHECK:
+  [PASS] sample_rate             : 0 failures
+  [PASS] channels                : 0 failures
+  [PASS] duration_bounds         : 0 failures
+  [PASS] clipping                : 0 failures
+  [PASS] silence_ratio           : 0 failures
+  [PASS] estimated_snr           : 0 failures
+  [PASS] duplicate_hash          : 0 failures
+  [PASS] script_characters       : 0 failures
+  [PASS] plausible_cps           : 0 failures
+  [PASS] language_id             : 0 failures
+  [PASS] metadata_schema         : 0 failures
+  [PASS] split_leakage           : 0 failures
+----------------------------------------------------------------------
+All checks PASSED cleanly with 0 defects.
+======================================================================
+
+Simulating Round 1 (Guidelines v1.0 - 60 clips)...
+Simulating Round 2 (Guidelines v2.0 - 60 clips)...
+
+============================================================
+INTER-ANNOTATOR AGREEMENT RESULTS:
+============================================================
+Round 1 (Guidelines v1.0):
+  - Transcript Inter-Annotator WER: 8.77%
+  - Intent Cohen's Kappa (κ):      0.686
+
+Round 2 (Guidelines v2.0 - Revised):
+  - Transcript Inter-Annotator WER: 0.53%
+  - Intent Cohen's Kappa (κ):      0.955
+============================================================
+Saved 10 detailed case studies to /home/rajdeepvraj/Documents/STT AI/Project/supporting_files/agreement_analysis/10_detailed_disagreements.md
+Frozen Gold Test Set saved to /home/rajdeepvraj/Documents/STT AI/Project/data/gold_test_set.csv (90 clips)
+Gold Test Set SHA-256 Checksum: c5e195975ce089bffbdd6bc1899e3be90c0ad759ae1dabec60d2f34b870357bc
+======================================================================
+Running Active Learning Simulation (Informativeness vs. Random)
+======================================================================
+Unlabelled Pool Size: 360 clips
+Evaluation Test Set:  90 clips
+Budget  30 clips -> AL Macro-F1: 0.614 | Random Macro-F1: 0.412 ± 0.094 (Δ = +0.202)
+Budget  60 clips -> AL Macro-F1: 0.891 | Random Macro-F1: 0.654 ± 0.081 (Δ = +0.237)
+Budget 120 clips -> AL Macro-F1: 1.000 | Random Macro-F1: 0.861 ± 0.058 (Δ = +0.139)
+
+Saved Active Learning metrics to /home/rajdeepvraj/Documents/STT AI/Project/supporting_files/active_learning/al_vs_random_metrics.csv
+Saved Active Learning curve to /home/rajdeepvraj/Documents/STT AI/Project/supporting_files/active_learning/learning_curve.png
+Saved anonymised consent register to /home/rajdeepvraj/Documents/STT AI/Project/supporting_files/consent_register.csv (16 speakers)
+All EDA plots saved to /home/rajdeepvraj/Documents/STT AI/Project/supporting_files/plots
+===========================================================================
+STARTING COMPLETE CS203 ASSIGNMENT 1 END-TO-END PIPELINE
+===========================================================================
+
+===========================================================================
+PIPELINE STEP: 1. Audio Cleaning & Standardization
+===========================================================================
+Step '1. Audio Cleaning & Standardization' completed successfully in 13.03 seconds.
+
+===========================================================================
+PIPELINE STEP: 2. Leakage-Free Dataset Splitting
+===========================================================================
+Step '2. Leakage-Free Dataset Splitting' completed successfully in 0.51 seconds.
+
+===========================================================================
+PIPELINE STEP: 3. Full Validation Suite (Audio, Metadata, Splits)
+===========================================================================
+Step '3. Full Validation Suite (Audio, Metadata, Splits)' completed successfully in 12.61 seconds.
+
+===========================================================================
+PIPELINE STEP: 4. Labelling Agreement & Gold Test Set Freezing
+===========================================================================
+Step '4. Labelling Agreement & Gold Test Set Freezing' completed successfully in 2.61 seconds.
+
+===========================================================================
+PIPELINE STEP: 5. Active Learning vs. Random Selection Simulation
+===========================================================================
+Step '5. Active Learning vs. Random Selection Simulation' completed successfully in 3.21 seconds.
+
+===========================================================================
+PIPELINE STEP: 6. Consent Register Generation
+===========================================================================
+Step '6. Consent Register Generation' completed successfully in 0.43 seconds.
+
+===========================================================================
+PIPELINE STEP: 7. Exploratory Data Analysis & Plots Generation
+===========================================================================
+Step '7. Exploratory Data Analysis & Plots Generation' completed successfully in 2.64 seconds.
+
+===========================================================================
+ALL PIPELINE STEPS COMPLETED IN 35.04 SECONDS!
+Data and supporting artifacts are frozen and ready.
+===========================================================================
